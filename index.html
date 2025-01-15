@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AR.js Demo</title>
-
-  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@3f0df33946cf12e3d552b3b4e500dd5b8ff6f692/dist/aframe-master.min.js"></script>
+  <title>AR.js Optimized</title>
+  <script src="https://cdn.jsdelivr.net/npm/aframe@1.2.0/dist/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ar-js@3.3.2/aframe/build/aframe-ar.min.js"></script>
-  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
   <a-scene
     embedded
     vr-mode-ui="enabled: false"
-    arjs="debugUIEnabled: true;"
+    arjs="sourceType: webcam; debugUIEnabled: true;"
   >
     <a-marker preset="hiro">
-      <a-box color="red" position="0 0.5 0" scale="0.1 0.1 0.1"></a-box>
+      <a-box position="0 0.5 0" material="color: red;"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
