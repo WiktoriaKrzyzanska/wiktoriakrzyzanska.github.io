@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AR.js Optimized</title>
-  <script src="https://cdn.jsdelivr.net/npm/aframe@1.2.0/dist/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ar-js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+<meta
+        http-equiv="Content-Security-Policy"
+        content="
+          default-src 
+            'self' 
+            data: 
+            gap: 
+            https://ssl.gstatic.com 
+            'unsafe-eval' 
+            https://cdn.aframe.io         
+            https://dpdb.webvr.rocks      
+            https://fonts.googleapis.com  
+            https://cdn.jsdelivr.net      
+            ; 
+          style-src 
+            'self' 
+            'unsafe-inline'
+            ; 
+          media-src *; 
+          img-src 
+            'self' 
+            data:                        
+            content:                      
+            blob:                         
+            ;
+        "
+      />
+  <script src="https://cdn.jsdelivr.net/npm/aframe@1.6.0/dist/aframe-master.min.js"></script>
+  <script id='my-scene' type="text/html">
+  </script>
+  <script>
+    document.addEventListener('deviceready', function() {
+      document.getElementById('scene-root').innerHTML = document.getElementById('my-scene').innerHTML
+    })
+  </script>
 </head>
 <body style="margin: 0; overflow: hidden;">
   <a-scene
